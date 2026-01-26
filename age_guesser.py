@@ -7,9 +7,10 @@ Username = input('What is your name?')
 
 while UserAnswer != "y":
     RandomChoice = random.randint(15,30)
-    UserAnswer = input(f'I think your age is: {RandomChoice} years old.')
-    if UserAnswer != "y":
-        print('Rats.')
-    else:
-        break
+    UserAnswer = input(f'I think your age is: {RandomChoice} years old. Am I right? (y/n)').strip().lower()
+    if UserAnswer == "y":
+        break    
+    print('Rats.')
+
+print(f'Nice to meet you, {Username}!')
 
